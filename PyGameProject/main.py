@@ -1,4 +1,4 @@
-from tracemalloc import start
+
 import pygame
 import os
 
@@ -19,10 +19,10 @@ RedBullets = []
 MaxBullets = 3
 WinnerFont = pygame.font.SysFont("comiscans", 100)
 BulletHitSound = pygame.mixer.Sound(
-    os.path.join("MyProjects", "PyGameProject", "Assets", "Grenade+1.mp3")
+    os.path.join("PyGameProject", "Assets", "Grenade+1.mp3")
 )
 BulletFireSound = pygame.mixer.Sound(
-    os.path.join("MyProjects", "PyGameProject", "Assets", "Gun+Silencer.mp3")
+    os.path.join("PyGameProject", "Assets", "Gun+Silencer.mp3")
 )
 HealthFont = pygame.font.SysFont("comiscans", 40)
 YellowHit = pygame.USEREVENT + 1
@@ -31,20 +31,20 @@ pygame.display.set_caption("First Game Project")
 SpaceShipWidth, SpaceshipHeight = 45, 35
 Space = pygame.transform.scale(
     pygame.image.load(
-        os.path.join("MyProjects", "PyGameProject", "Assets", "space.png")
+        os.path.join("PyGameProject", "Assets", "space.png")
     ),
     (Width, Height),
 )
 
 YellowSpaceshipImage = pygame.image.load(
-    os.path.join("MyProjects", "PyGameProject", "Assets", "Yellow.png")
+    os.path.join( "PyGameProject", "Assets", "Yellow.png")
 )
 YellowSpaceship = pygame.transform.rotate(
     pygame.transform.scale(YellowSpaceshipImage, (SpaceShipWidth, SpaceshipHeight)), 90
 )
 
 RedSpaceshipImage = pygame.image.load(
-    os.path.join("MyProjects", "PyGameProject", "Assets", "Red.png")
+    os.path.join("PyGameProject", "Assets", "Red.png")
 )
 RedSpaceship = pygame.transform.rotate(
     pygame.transform.scale(RedSpaceshipImage, (SpaceShipWidth, SpaceshipHeight)), -90
